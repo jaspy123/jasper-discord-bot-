@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: jasper-discord
+    env: python
+    runtime: python-3.11
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python jasper_bot.py"
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
